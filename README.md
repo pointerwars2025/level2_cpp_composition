@@ -49,17 +49,18 @@ Your linked list code is going to be used to create a queue. You may
 either choose to use composition in your new queue class, or 
 inheritance. The choice is yours. You may wish to review both
 the level2_cpp_composition and level2_cpp_inheritance linked_list.h
-header files before making your decision.
+and queue.h header files before making your decision.
 
 ## Task 1: Improve Linked List Implementations Focusing on Common Operations
 The general suggestion we want to provide here is that you should make
 your common operations fast, and generally avoid doing more work than 
-needed, especially if a simple optimization exists.
+is necessary, especially if a simple optimization exists.
 
 Most participants, whether they be free or paid, implemented suboptimal
-algorithms for use in a queue. Those will need to be corrected, otherwise
-the execution of the performance program will time out. If it didn't time
-out, you'd be waiting for days!
+algorithms in their linked lists when they are used to implement a queue. 
+Those will need to be corrected, otherwise the execution of the 
+performance program will time out. If it didn't time out, you'd be 
+waiting for days for the program to complete!
 
 There was a hint in linked_list.h that specifies that you can add members
 to the linked_list class. Adding a size so that you avoid iteration
@@ -88,8 +89,7 @@ One search will push 20,000,000 or so nodes to the queue in a loop,
 which means that around 400,000,000,000,000 iterations will occur, instead 
 of 20,000,000. If those were US dollars, that's the difference between 10x 
 the current US national debt and being independently wealthy. 
-This is also why I say that the performance program would run for days, 
-as implemented by many participants.
+This is also why I say that the performance program would run for days.
 
 The typical solution to this is to just build a doubly linked list, but
 that introduces another 8 bytes per node. If you know that you're not
